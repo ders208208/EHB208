@@ -1,2 +1,2 @@
 # EHB208
-Ders Reposu
+Buraya odevde verdigimiz isleri atabilirsiniz. Pull request olusturup dosyalarinizi gonderin.
