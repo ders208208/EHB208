@@ -1,0 +1,50 @@
+<?xml version="1.0"?>
+<flowgorithm fileversion="2.11">
+    <attributes>
+        <attribute name="name" value=""/>
+        <attribute name="authors" value="omerl"/>
+        <attribute name="about" value=""/>
+        <attribute name="saved" value="2021-03-26 12:44:15 &#214;&#214;"/>
+        <attribute name="created" value="b21lcmw7T01FUkxVVEZVOzIwMjEtMDMtMjY7MTI6MjY6MTcgw5bDljsyODAw"/>
+        <attribute name="edited" value="b21lcmw7T01FUkxVVEZVOzIwMjEtMDMtMjY7MTI6NDQ6MTUgw5bDljsxOzI5MDY="/>
+    </attributes>
+    <function name="Main" type="None" variable="">
+        <parameters/>
+        <body>
+            <declare name="arr" type="Integer" array="True" size="6"/>
+            <output expression="&quot;6 adet rastgele say&#305; giriniz:&quot;" newline="True"/>
+            <input variable="arr[0]"/>
+            <input variable="arr[1]"/>
+            <input variable="arr[2]"/>
+            <input variable="arr[3]"/>
+            <input variable="arr[4]"/>
+            <input variable="arr[5]"/>
+            <call expression="insertion(arr)"/>
+        </body>
+    </function>
+    <function name="insertion" type="None" variable="">
+        <parameters>
+            <parameter name="arr" type="Integer" array="True"/>
+        </parameters>
+        <body>
+            <declare name="size" type="Integer" array="False" size=""/>
+            <assign variable="size" expression="6"/>
+            <declare name="i" type="Integer" array="False" size=""/>
+            <for variable="i" start="1" end="size - 1" direction="inc" step="1">
+                <declare name="val" type="Integer" array="False" size=""/>
+                <assign variable="val" expression="arr[i]"/>
+                <declare name="j" type="Integer" array="False" size=""/>
+                <for variable="j" start="i - 1" end="0" direction="dec" step="1">
+                    <if expression="arr[j] &gt;= val">
+                        <then>
+                            <assign variable="arr[j+1]" expression="arr[j]"/>
+                            <assign variable="arr[j]" expression="val"/>
+                        </then>
+                        <else/>
+                    </if>
+                </for>
+            </for>
+            <output expression="&quot;siralanmis array:&quot; &amp; arr[0] &amp;&quot; &quot;&amp; arr[1] &amp;&quot; &quot;&amp; arr[2] &amp;&quot; &quot;&amp; arr[3] &amp;&quot; &quot;&amp; arr[4] &amp;&quot; &quot;&amp; arr[5]" newline="True"/>
+        </body>
+    </function>
+</flowgorithm>
